@@ -159,7 +159,15 @@
     });
 
   });
-
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+  
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
