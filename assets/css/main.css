@@ -396,48 +396,125 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer
+# Footer
 --------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+#footer {
+  padding: 0 0 30px 0;
+  color: #444444;
   font-size: 14px;
-  padding: 40px 0;
-  position: relative;
-  box-shadow: 0px 0px 12px 0px color-mix(in srgb, var(--default-color), transparent 90%);
+  background-color: var(--default-color-tertiary);
+}
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  background-color: transparent;
+}
+#footer img{
+  width: 250px;
 }
 
-.footer .copyright p {
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact h3 {
+  font-size: 24px;
+  margin: 0 0 15px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+#footer .footer-top .footer-contact h3 span {
+  color: #367300;
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14.5px;
+  line-height: 24px;
   margin-bottom: 0;
+  color:color-mix(in srgb,#fff, transparent 40%);
+}
+#footer .footer-top h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  padding-bottom: 12px;
+}
+#footer .row{
+  justify-content: space-between;
+}
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
 }
 
-.footer .social-links {
-  margin-top: 20px;
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  margin: 0 5px;
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #777777;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+#footer .footer-top .footer-links p{
+  color: #fff;
+}
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: none;
+  color: #367300;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: var(--default-color-primary);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 4px;
+  text-align: center;
+  width: 36px;
+  height: 36px;
   transition: 0.3s;
 }
 
-.footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+#footer .footer-top .social-links a:hover {
+  background-color: color-mix(in srgb, var(--default-color-primary), transparent 20%);
+  color: #fff;
+  text-decoration: none;
 }
 
-.footer .credits {
-  margin-top: 10px;
-  font-size: 13px;
+#footer .copyright {
   text-align: center;
+  float: left;
+    color:color-mix(in srgb,#fff, transparent 40%);
+}
+
+#footer .credits {
+  float: right;
+  text-align: center;
+  font-size: 13px;
+  color:color-mix(in srgb,#fff, transparent 40%);
+}
+
+@media (max-width: 768px) {
+
+  #footer .copyright,
+  #footer .credits {
+    float: none;
+    text-align: center;
+    padding: 2px 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1418,6 +1495,10 @@ Eventos
   justify-content: center;
   border: var(--default-color-secondary) solid 5px;
 }
+.image-content{
+  display: flex;
+  justify-content: center;
+}
 /*--------------------------------------------------------------
 # Alt Services Section
 --------------------------------------------------------------*/
@@ -1743,9 +1824,13 @@ Eventos
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
+.team{
+  background-color: var(--background-color-transparent);
+}
 .team .team-member {
+  background-color: var(--default-color-tertiary);
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 0px 2px 15px color-mix(in srgb, var(--default-color), transparent 90%);
   height: 100%;
 }
@@ -1770,7 +1855,7 @@ Eventos
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   transition: color 0.3s;
   margin: 0 3px;
-  border-radius: 4px;
+  border-radius: 25px;
   width: 36px;
   height: 36px;
   transition: ease-in-out 0.3s;
@@ -1794,16 +1879,17 @@ Eventos
 }
 
 .team .team-member .member-info h4 {
-  font-weight: 700;
+  color:#fff;
+  font-weight: 600;
   margin-bottom: 5px;
   font-size: 18px;
 }
 
 .team .team-member .member-info span {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--background-color), transparent 70%);
 }
 
 .team .team-member:hover .social {
@@ -1930,9 +2016,7 @@ Eventos
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-image: url("../img/contact-bg.png");
-  background-position: left center;
-  background-repeat: no-repeat;
+  background: var(--default-color-tertiary);
   position: relative;
 }
 
@@ -1945,7 +2029,6 @@ Eventos
 
 .contact:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1958,7 +2041,7 @@ Eventos
 }
 
 .contact .info-item i {
-  background: var(--accent-color);
+  background: var(--default-color-primary);
   color: var(--contrast-color);
   font-size: 20px;
   width: 44px;
@@ -1972,14 +2055,16 @@ Eventos
 }
 
 .contact .info-item h3 {
+  color: #fff;
   font-size: 20px;
   padding: 0;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 
 .contact .info-item p {
+  color: color-mix(in srgb, #fff, transparent 50%);
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
@@ -2037,8 +2122,8 @@ Eventos
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  background-color: color-mix(in srgb, var(--default-color-primary), transparent 60%);
+  border-color: color-mix(in srgb, #fff, transparent 80%);
 }
 
 .contact .php-email-form input[type=text]:focus,
@@ -2050,12 +2135,12 @@ Eventos
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: #fff
 }
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--default-color-primary);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
@@ -2063,7 +2148,7 @@ Eventos
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--default-color-primary), transparent 20%);
 }
 
 @keyframes animate-loading {
@@ -2075,6 +2160,15 @@ Eventos
     transform: rotate(360deg);
   }
 }
+/*-------------------------------------------------------------
+#End Banner
+--------------------------------------------------------------*/
+.section .end-banner{
+  background-image: url(/assets/img/end-banner.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
