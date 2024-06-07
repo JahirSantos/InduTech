@@ -791,16 +791,6 @@ section,
   color: #fff;
   background: #bba918;
 }
-
-#hero .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: #222222;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -813,15 +803,15 @@ section,
   }
 
   #hero h1 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 36px;
   }
 
   #hero h2 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     margin-bottom: 30px;
-    color: #222222;
+    color: #fff;
     font-weight: 400;
   }
 
@@ -833,7 +823,7 @@ section,
 
 @media (max-height: 500px) {
   #hero {
-    height: 120vh;
+    height: 100vh;
   }
 }
 
