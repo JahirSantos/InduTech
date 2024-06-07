@@ -841,225 +841,9 @@ section,
     height: 100vh;
   }
 }
-
-/*--------------------------------------------------------------
-# Clients Section
---------------------------------------------------------------*/
-.clients {
-  --background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  padding: 20px 0;
-}
-
-.clients .client-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.clients .client-logo img {
-  padding: 20px 40px;
-  max-width: 90%;
-  transition: 0.3s;
-  opacity: 0.5;
-  filter: grayscale(100);
-}
-
-.clients .client-logo img:hover {
-  filter: none;
-  opacity: 1;
-}
-
-@media (max-width: 640px) {
-  .clients .client-logo img {
-    padding: 20px;
-  }
-}
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 30px;
-}
-
-.about .content p {
-  margin-bottom: 30px;
-}
-
-.about .content .about-btn {
-  padding: 8px 30px 9px 30px;
-  color: var(--accent-color);
-  border-radius: 50px;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 13px;
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid var(--accent-color);
-}
-
-.about .content .about-btn i {
-  font-size: 16px;
-  padding-left: 5px;
-}
-
-.about .content .about-btn:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.about .icon-box i {
-  font-size: 40px;
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-.about .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-}
-
-.about .icon-box h4 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.about .icon-box p {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 0;
-}
-
-.about .icon-box:hover h4 a {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
-.stats .stats-item {
-  padding: 10px;
-}
-
-.stats .stats-item i {
-  font-size: 44px;
-  color: var(--accent-color);
-  line-height: 0;
-  margin-right: 15px;
-}
-
-.stats .stats-item .purecounter {
-  color: var(--heading-color);
-  font-size: 40px;
-  display: block;
-  font-weight: 700;
-  line-height: 40px;
-}
-
-.stats .stats-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding: 15px 0 0 0;
-  margin: 0;
-  font-family: var(--heading-font);
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
-.services .service-item {
-  box-shadow: 0px 0 30px 0 color-mix(in srgb, var(--default-color), transparent 90%);
-  padding: 50px 30px;
-  transition: all ease-in-out 0.4s;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.services .service-item:before {
-  content: "";
-  position: absolute;
-  background: color-mix(in srgb, var(--accent-color), transparent 96%);
-  right: -80px;
-  top: -80px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  transition: all 0.3s;
-  z-index: -1;
-}
-
-.services .service-item:after {
-  content: "";
-  position: absolute;
-  background: color-mix(in srgb, var(--accent-color), transparent 97%);
-  right: -140px;
-  top: -140px;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  transition: all 0.3s;
-  z-index: -1;
-}
-
-.services .service-item i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  font-size: 24px;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-}
-
-.services .service-item h4 {
-  font-weight: 600;
-  margin: 15px 0 0 0;
-  transition: 0.3s;
-  font-size: 20px;
-}
-
-.services .service-item h4 a {
-  color: var(--heading-color);
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin: 10px 0 0 0;
-}
-
-.services .service-item:hover:before,
-.services .service-item:hover:after {
-  background: var(--accent-color);
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0px;
-}
-
-.services .service-item:hover h4 a,
-.services .service-item:hover p {
-  color: var(--contrast-color);
-}
-
-.services .service-item:hover i {
-  background: var(--contrast-color);
-  color: var(--accent-color);
-}
-.services .services-carousel,
-.services .services-slider {
-  overflow: hidden;
-}
 /**/
 
 .ftco-section {
@@ -1079,7 +863,10 @@ section,
   font-size: 28px;
   color: #000;
 }
-
+.section-title h2 {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
 .img {
   width: 200px!important;
   height: 200px!important;
@@ -1193,12 +980,6 @@ section,
   justify-content: center;
   border-radius: 20px; /* Añadir esta línea */
 }
-
-.section-title h2 {
-  font-family: "Poppins", sans-serif;
-  color: #fff;
-}
-
 .blog-entry {
   font-family: "Nunito", sans-serif !important;
   width: 350px;
@@ -1280,6 +1061,11 @@ section,
   color: rgba(0, 0, 0, 0.4);
 }
 
+@media (max-width: 768px) {
+  .section-title h2{
+    font-size: 15px;
+  }
+}
   /*----------------------------------------------------------
   Cursos
   ----------------------------------------------------------*/
