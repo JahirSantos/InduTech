@@ -34,7 +34,7 @@
   --heading-color: #222222;
 
   /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
-  --accent-color: #3498db;
+  --accent-color: #006bed;
 
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
   --contrast-color: #ffffff;
@@ -111,7 +111,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 70px;
+  max-height: 50px;
   margin-right: 8px;
 }
 
@@ -154,9 +154,32 @@ h6 {
     order: 3;
   }
 }
+@media (max-width: 768px) {
+  .header .logo img {
+    max-height: 40px;
+  }
+
+  .header .logo h1 {
+    font-size: 24px;
+  }
+
+  .header .btn-getstarted {
+    margin: 0 0 0 15px;
+  }
+  .header.scrolled .logo img {
+    content: url("assets/img/logos/logo-4.png");
+    max-height: 40px;
+    margin-right: 8px;
+  }
+}
 
 .scrolled .header {
-  box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: var(--default-color-tertiary);
+}
+.scrolled .logo img {
+  content: url("assets/img/logos/logo-4.png");
+  max-height: 50px;
+  margin-right: 8px;
 }
 
 /*--------------------------------------------------------------
@@ -408,10 +431,6 @@ h6 {
   padding: 60px 0 30px 0;
   background-color: transparent;
 }
-#footer img{
-  width: 250px;
-}
-
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
@@ -505,6 +524,9 @@ h6 {
   text-align: center;
   font-size: 13px;
   color:color-mix(in srgb,#fff, transparent 40%);
+}
+#footer img{
+  max-height: 50px;
 }
 
 @media (max-width: 768px) {
@@ -1500,53 +1522,6 @@ Eventos
   justify-content: center;
 }
 /*--------------------------------------------------------------
-# Alt Services Section
---------------------------------------------------------------*/
-.alt-services .img {
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.alt-services .img img {
-  transition: 0.6s;
-}
-
-.alt-services .details {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  padding: 30px;
-  transition: all ease-in-out 0.3s;
-  background: color-mix(in srgb, var(--contrast-color), transparent 5%);
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0px 0 25px color-mix(in srgb, var(--default-color), transparent 92%);
-}
-
-.alt-services .details h3 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-  transition: ease-in-out 0.3s;
-}
-
-.alt-services .details p {
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.alt-services .service-item:hover .details h3 {
-  color: var(--accent-color);
-}
-
-.alt-services .service-item:hover .img img {
-  transform: scale(1.2);
-}
-
-/*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
 .features .features-item {
@@ -1712,6 +1687,10 @@ Eventos
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+.portfolio{
+  background-color: transparent;
+
+}
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -2302,11 +2281,4 @@ Eventos
 .service .swiper-pagination {
   margin-top: 20px;
   position: relative;
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }

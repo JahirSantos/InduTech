@@ -223,6 +223,20 @@
 
 	};
 	fullHeight();
+    var header = document.getElementById('header');
+    var logo = document.getElementById('logo-img');
+    var originalLogo = 'assets/img/logos/logo-2.png';
+    var scrolledLogo = 'assets/img/logos/logo-3.png';
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+        logo.src = scrolledLogo;
+      } else {
+        header.classList.remove('scrolled');
+        logo.src = originalLogo;
+      }
+    });
 
 	var carousel = function() {
 		$('.featured-carousel').owlCarousel({
