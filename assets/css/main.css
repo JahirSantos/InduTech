@@ -1252,6 +1252,20 @@ section,
   padding-top: 30px;
 }
 
+@media (max-width: 768px) {
+  .courses .course-item{
+    width: 350px;
+  }
+  .courses .course-content .category {
+    font-size: 12px;
+  }
+  .category-modalidad{
+    font-size: 12px;
+  
+  }
+  
+}
+
 /*-------------------------------------------------------------
 Eventos 
 */
