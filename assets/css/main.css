@@ -1067,14 +1067,37 @@ section,
   .section-title h2{
     font-size: 15px;
   }
+  .blog-entry {
+    width: 300px;
+    height: 300px;
+  }
+  .img {
+    width: 150px!important;
+    height: 150px!important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    border-radius: 20px; /* Añadir esta línea */
+  }
+  .block-20 {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 150px;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    border-radius: 20px; /* Añadir esta línea */
+  }
+  .blog-entry .text {
+    width: 100%;
+    position: relative;
+    border-top: 0;
+    border-radius: 20px;
+    justify-content: center;
+  }
 }
-  /*----------------------------------------------------------
-  Cursos
-  ----------------------------------------------------------*/
-
-
-
-
 /*------------------------------------------------------------
 # Categories Section
 --------------------------------------------------------------*/
@@ -1098,6 +1121,7 @@ section,
 .courses .course-item {
   background-color: #fff;
   border-radius: 10px;
+  margin-bottom: 20px; /* Ajusta esto según sea necesario */
 }
 
 .courses .course-item img{
