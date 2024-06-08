@@ -537,6 +537,9 @@ h6 {
     text-align: center;
     padding: 2px 0;
   }
+  #footer img{
+    max-height: 40px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1592,14 +1595,6 @@ section,
   background: var(--default-color-tertiary);
   position: relative;
 }
-
-@media (max-width: 640px) {
-  .contact {
-    background-position: center 50px;
-    background-size: contain;
-  }
-}
-
 .contact:before {
   content: "";
   position: absolute;
@@ -1694,7 +1689,7 @@ section,
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--default-color);
+  color: #fff;
   background-color: color-mix(in srgb, var(--default-color-primary), transparent 60%);
   border-color: color-mix(in srgb, #fff, transparent 80%);
 }
@@ -1733,16 +1728,19 @@ section,
     transform: rotate(360deg);
   }
 }
-/*-------------------------------------------------------------
-#End Banner
---------------------------------------------------------------*/
-.section .end-banner{
-  background-image: url(/assets/img/end-banner.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+@media (max-width: 640px) {
+  .contact {
+    padding: 20px;
+    background-position: center 50px;
+    background-size: contain;
+  }
+  .contact .info-item h3 {
+    font-size: 15px;
+  }
+  .contact .info-item p {
+    font-size: 13px;
+  }
 }
-
-
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
