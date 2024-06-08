@@ -237,7 +237,10 @@
         logo.src = originalLogo;
       }
     });
-
+  // JavaScript
+  document.getElementById('close-button').addEventListener('click', function() {
+    document.getElementById('poster').style.display = 'none';
+  });
 	var carousel = function() {
 		$('.featured-carousel').owlCarousel({
 	    loop:true,
