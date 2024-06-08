@@ -1262,7 +1262,20 @@ section,
   .category-modalidad{
     font-size: 11.5px;
   }
-  
+  .category-estado{
+    font-size: 11.5px;
+  }
+  .category-date{
+    font-size: 11.5px;
+  }
+  .courses .course-content h3 {
+    font-weight: 700;
+    font-size: 15.5px;
+  }
+  .courses .course-content .description {
+    font-size: 13px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+  }
 }
 
 /*-------------------------------------------------------------
