@@ -990,6 +990,7 @@ section,
   border-image-slice: 1;
   border-color: var(--default-color-primary);
   border-radius: 20px; /* Añadir esta línea */
+  margin-bottom: 20px; /* Ajusta esto según sea necesario */
 }
 
 .blog-entry .text {
