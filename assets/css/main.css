@@ -1191,7 +1191,7 @@ section,
   color: var(--contrast-color);
   font-size: 14px;
   padding: 6px 14px;
-  margin: 0;
+  margin: 1px;
   border-radius: 5px;
 
 }
@@ -1369,6 +1369,7 @@ section,
   display: flex;
   justify-content: center;
 }
+
 @media (min-width: 1024px) {
   .events {
     background-attachment: fixed;
