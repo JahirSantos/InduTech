@@ -1898,3 +1898,18 @@ section,
   font-size: 2em;
   cursor: pointer;
 }
+
+/*Términos y Condiciones*/
+.terms{
+  background-color: var(--default-color-tertiary);
+  padding: 20px;
+}
+.terms h3{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.terms p{
+  color: #fff;
+}
