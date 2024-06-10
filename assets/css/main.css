@@ -862,6 +862,66 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about{
+  font-family: "Nunito", sans-serif;
+  background-color: var(--default-color-tertiary);
+}
+.about .title-about{
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+
+}
+.about .content h3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 650;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 30PX;
+}
+.about .content span {
+  color: var(--default-color-secondary);
+}
+.about .row{
+  margin-bottom: 70px;
+}
+.about .row p{
+  color: #fff;
+  text-align: center;
+  line-height: 28px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.about img {
+  width: 300px;
+  border-radius: 20px; /* Esquinas circulares de 10px (ajusta según sea necesario) */
+}
+
+
+@media (max-width: 768px) {
+  .about .section-title .title-about{
+    font-size: 20px;
+  }
+  .about .content {
+    padding: 0 30px; /* Ajusta el relleno horizontal para evitar que el texto se pegue a los bordes */
+  }
+  .about .row p{
+    text-align: center;
+    font-size: 14px;
+  }
+  .about .row h3{
+    font-size: 17.2px;
+  }
+  .about img{
+    padding: 0 20px;
+    border-radius: 15px; /* Esquinas circulares de 10px (ajusta según sea necesario) */
+  }
+}
 /**/
 
 .ftco-section {
@@ -1913,4 +1973,103 @@ section,
 }
 .terms p{
   color: #fff;
+}
+
+/*---------------------------------------
+PILARES
+-----------------------------------------*/
+/*--------------------------------------------------------------
+# Featured Services
+--------------------------------------------------------------*/
+.pilares{
+  background-color: var(--background-color-transparent);
+}
+
+.pilares .icon-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: var(--default-color-tertiary);
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  z-index: 1;
+  text-align: center;
+}
+.icon-box img{
+  width:150px;
+  height: 150px;
+
+}
+
+.pilares .icon-box::before {
+  content: "";
+  position: absolute;
+  background: #cbe0fb;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.pilares .icon-box:hover::before {
+  background: var(--default-color-primary);
+  top: 0;
+  border-radius: 0px;
+}
+
+.pilares .icon {
+  margin-bottom: 15px;
+}
+
+.pilares .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: var(--default-color-secondary);
+  transition: all 0.3s ease-in-out;
+}
+
+.pilares .title {
+  font-weight: 650;
+  margin-bottom: 15px;
+  font-size: 19.2px;
+}
+
+.pilares .title a {
+  color: #111;
+}
+.pilares .description {
+  font-size: 14.5px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+.pilares.icon-box p{
+  font-size: 16px;
+  text-align:  center;
+  font-weight: 400;
+}
+
+.pilares .icon-box:hover .title a,
+.pilares .icon-box:hover .title span,
+.pilares .icon-box:hover .description {
+  color: #fff;
+}
+.pilares span {
+  color:var(--default-color-secondary)
+}
+.pilares .icon-box:hover .icon i {
+  color: #fff;
+}
+@media (max-width: 768px){
+  .row{
+    padding:25px;
+  }
+  .pilares .icon-box .title{
+    font-size: 17.2px;
+  }
+  .pilares .icon-box p{
+    font-size: 14px;
+  }
 }
