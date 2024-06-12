@@ -1984,7 +1984,12 @@ PILARES
 .pilares{
   background-color: var(--background-color-transparent);
 }
-
+.pilares p{
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+}
 .pilares .icon-box {
   padding: 30px;
   position: relative;
@@ -1995,6 +2000,7 @@ PILARES
   border-radius: 8px;
   z-index: 1;
   text-align: center;
+  margin-bottom: 20px;
 }
 .icon-box img{
   width:150px;
@@ -2015,7 +2021,7 @@ PILARES
 }
 
 .pilares .icon-box:hover::before {
-  background: var(--default-color-primary);
+  background: var(--default-color-secondary);
   top: 0;
   border-radius: 0px;
 }
@@ -2054,7 +2060,7 @@ PILARES
 .pilares .icon-box:hover .title a,
 .pilares .icon-box:hover .title span,
 .pilares .icon-box:hover .description {
-  color: #fff;
+  color: var(--default-color-primary);
 }
 .pilares span {
   color:var(--default-color-secondary)
@@ -2073,3 +2079,7 @@ PILARES
     font-size: 14px;
   }
 }
+
+/*---------------------------------------
+FILTER
+-----------------------------------------*/

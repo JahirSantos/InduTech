@@ -70,7 +70,7 @@
               <li><a href="">Recursos</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="">Empresas</a></li>
+          <li><a class="nav-link scrollto" href="/empresas.html">Empresas</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -81,161 +81,180 @@
   </header>
 
   <main class="main">
-    <!-- Courses Section -->
-    <section id="courses" class="courses section">
 
-      <!-- Section Title -->
+    <section id="courses" class="courses section">
       <div class="container section-title" data-aos="fade-up">
         <h2>CURSOS</h2>
-      </div><!-- End Section Title -->
-
+      </div>
       <div class="container">
-
         <div class="row">
+          <div class="col-lg-3">
+            <div id="products-filters">
+              <div class="filter-group">
+                <h5>Áreas de Conocimientos</h5>
+                <label><input type="checkbox" data-filter="*" class="filter-active">Todos</label>
+                <label><input type="checkbox" data-filter="filter-category-"> Conocimientos Técnicos del Gas Natural</label><br>
+                <label><input type="checkbox" class="filter-category" value="Conocimientos Técnicos del Petróleo"> Conocimientos Técnicos del Petróleo</label><br>
+                <label><input type="checkbox" class="filter-category" value="Control Automático e Instrumentación"> Control Automático e Instrumentación</label><br>
+                <label><input type="checkbox" class="filter-category" value="Gestión de Operaciones"> Gestión de Operaciones</label><br>
+                <label><input type="checkbox" class="filter-category" value="Gestión Integral de Mantenimiento y Confiabilidad"> Gestión Integral de Mantenimiento y Confiabilidad</label>
+              </div>
+              <div class="filter-group">
+                <h5>Estado</h5>
+                <label><input type="checkbox" class="filter-status" value="Cartelera"> Cartelera</label><br>
+                <label><input type="checkbox" class="filter-status" value="Próximos"> Próximos</label>
+              </div>
+              <div class="filter-group">
+                <h5>Modalidad</h5>
+                <label><input type="checkbox" class="filter-mode" value="Presencial"> Presencial</label><br>
+                <label><input type="checkbox" class="filter-mode" value="Online"> Online</label>
+              </div>
+              <button id="clear-filters">Vacíar todos los filtros</button>
+            </div>
+          </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-            <div class="course-item">
-              <img src="assets/img/cursos/curso-1.jpeg" class="img-fluid">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Competencias Técnicas del Gas Natural</p>
-                  <p class="category-modalidad">Presencial</p>
+          <div id="course-list" class="col-lg-9">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                <div class="course-item">
+                  <img src="assets/img/cursos/curso-1.jpeg" class="img-fluid">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="category">Competencias Técnicas del Gas Natural</p>
+                      <p class="category-modalidad">Presencial</p>
+                    </div>
+    
+                    <h3><a href="course-details.html">Introducción a la Industria del Oil & Gas</a></h3>
+                    <p class="description">Descubre la esencia de la Industrial del Oil & Gas: comprensión
+                      integral desde la exploración hasta la comercialización. Aprende
+                      sobre exploración, perforación, producción, refinación y más, con
+                      un enfoque práctico y teórico.</p>
+                      <div class="trainer">
+                        <div class="categories mb-3">
+                          <p class="category-estado">Cartelera</p>
+                          <p class="category-date">Inicio: 15/06/2024</p>
+                        </div>
+                      </div>
+                  </div>
                 </div>
-
-                <h3><a href="course-details.html">Introducción a la Industria del Oil & Gas</a></h3>
-                <p class="description">Descubre la esencia de la Industrial del Oil & Gas: comprensión
-                  integral desde la exploración hasta la comercialización. Aprende
-                  sobre exploración, perforación, producción, refinación y más, con
-                  un enfoque práctico y teórico.</p>
-                  <div class="trainer">
-                    <div class="categories mb-3">
-                      <p class="category-estado">Cartelera</p>
-                      <p class="category-date">Inicio: 15/06/2024</p>
+              </div> <!-- End Course Item-->
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="course-item">
+                  <img src="assets/img/cursos/curso-2.jpg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="category">Competencias Técnicas del Gas Natural</p>
+                      <p class="category-modalidad">Presencial</p>
+                    </div>
+    
+                    <h3><a href="course-details.html">Procesamiento y Fraccionamiento del Gas Natural</a></h3>
+                    <p class="description">Nuestro curso "Procesamiento y Fraccionamiento del Gas
+                      Natural" te proporcionará los conocimientos y habilidades para
+                      dominar cada etapa, de¡Inscríbete ahora y lleva tu carrera al
+                      siguiente nivel!
+                      </p>
+                      <div class="trainer">
+                        <div class="categories mb-3">
+                          <p class="category-estado">Cartelera</p>
+                          <p class="category-date">Inicio: 06/07/2024</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div> <!-- End Course Item-->
+    
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="course-item">
+                  <img src="assets/img/cursos/curso-3.jpeg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="category-area">Gestión de Operaciones</p>
+                      <p class="category-modalidad">Presencial</p>
+                    </div>
+    
+                    <h3><a href="course-details.html">Gestión de Operaciones y Gestión de Procesos</a></h3>
+                    <p class="description">Herramientas necesarios para optimizar los procesos operativos en una organización. Se abordan temas como el análisis y diseño de procesos entre otros. <br><br></p>
+                      <div class="trainer">
+                        <div class="categories mb-3">
+                          <p class="category-estado">Cartelera</p>
+                          <p class="category-date">Inicio: 18/06/2024</p>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div> <!-- End Course Item-->
+      
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="course-item">
+                  <img src="assets/img/cursos/curso-4.jpeg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="category">Gestión de Operaciones</p>
+                      <p class="category-modalidad">Presencial</p>
+                    </div>
+    
+                    <h3><a href="course-details.html">Gestión Integral de Mantenimiento y Confiabilidad</a></h3>
+                    <p class="description">e ofrece una visión completa y actualizada de las mejores prácticas en el campo del mantenimiento industrial.<br><br></p>
+                    <div class="trainer">
+                      <div class="categories mb-3">
+                        <p class="category-estado">Cartelera</p>
+                        <p class="category-date">Inicio: 17/06/2024</p>
+                      </div>
                     </div>
                   </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="course-item">
-              <img src="assets/img/cursos/curso-2.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Competencias Técnicas del Gas Natural</p>
-                  <p class="category-modalidad">Presencial</p>
                 </div>
-
-                <h3><a href="course-details.html">Procesamiento y Fraccionamiento del Gas Natural</a></h3>
-                <p class="description">Nuestro curso "Procesamiento y Fraccionamiento del Gas
-                  Natural" te proporcionará los conocimientos y habilidades para
-                  dominar cada etapa, de¡Inscríbete ahora y lleva tu carrera al
-                  siguiente nivel!
-                  </p>
-                  <div class="trainer">
-                    <div class="categories mb-3">
-                      <p class="category-estado">Cartelera</p>
-                      <p class="category-date">Inicio: 06/07/2024</p>
+              </div> <!-- End Course Item-->
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="course-item">
+                  <img src="assets/img/cursos/curso-5.jpeg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="category">Control Automático e Instrumentación</p>
+                      <p class="category-modalidad">Presencial</p>
+                    </div>
+    
+                    <h3><a href="course-details.html">Introducción a la Instrumentación Industrial y sus Aplicaciones</a></h3>
+                    <p class="description">Se enfoca en desarrollar
+                      habilidades para seleccionar, instalar, calibrar y mantener
+                      instrumentos industriales, permitiendo a los participantes contribuir
+                      de manera efectiva en la optimización y control de procesos
+                      industriales.</p>
+                    <div class="trainer">
+                      <div class="categories mb-3">
+                        <p class="category-estado">Cartelera</p>
+                        <p class="category-date">Inicio: 15/06/2024</p>
+                      </div>
                     </div>
                   </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="course-item">
-              <img src="assets/img/cursos/curso-3.jpeg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category-area">Gestión de Operaciones</p>
-                  <p class="category-modalidad">Presencial</p>
                 </div>
-
-                <h3><a href="course-details.html">Gestión de Operaciones y Gestión de Procesos</a></h3>
-                <p class="description">Herramientas necesarios para optimizar los procesos operativos en una organización. Se abordan temas como el análisis y diseño de procesos entre otros. <br><br></p>
-                  <div class="trainer">
-                    <div class="categories mb-3">
-                      <p class="category-estado">Cartelera</p>
-                      <p class="category-date">Inicio: 18/06/2024</p>
+              </div> <!-- End Course Item-->
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="course-item">
+                  <img src="assets/img/cursos/curso-6.jpeg" class="img-fluid" alt="...">
+                  <div class="course-content">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <p class="category">Control Automático e Instrumentación</p>
+                      <p class="category-modalidad">Presencial</p>
                     </div>
-                  </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-  
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="course-item">
-              <img src="assets/img/cursos/curso-4.jpeg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Gestión de Operaciones</p>
-                  <p class="category-modalidad">Presencial</p>
-                </div>
-
-                <h3><a href="course-details.html">Gestión Integral de Mantenimiento y Confiabilidad</a></h3>
-                <p class="description">e ofrece una visión completa y actualizada de las mejores prácticas en el campo del mantenimiento industrial.<br><br></p>
-                <div class="trainer">
-                  <div class="categories mb-3">
-                    <p class="category-estado">Cartelera</p>
-                    <p class="category-date">Inicio: 17/06/2024</p>
+    
+                    <h3><a href="course-details.html">Programación de PLC Aplicada al Control de Procesos</a></h3>
+                    <p class="description">Nuestro curso te ofrece un enfoque integral, desde los
+                      fundamentos hasta aplicaciones avanzadas como la simulación
+                      y el control de procesos con regulación PID.</p>
+                      <div class="trainer">
+                        <div class="categories mb-3">
+                          <p class="category-estado">Cartelera</p>
+                          <p class="category-date">Inicio: 17/06/2024</p>
+                        </div>
+                      </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="course-item">
-              <img src="assets/img/cursos/curso-5.jpeg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Control Automático e Instrumentación</p>
-                  <p class="category-modalidad">Presencial</p>
-                </div>
-
-                <h3><a href="course-details.html">Introducción a la Instrumentación Industrial y sus Aplicaciones</a></h3>
-                <p class="description">Se enfoca en desarrollar
-                  habilidades para seleccionar, instalar, calibrar y mantener
-                  instrumentos industriales, permitiendo a los participantes contribuir
-                  de manera efectiva en la optimización y control de procesos
-                  industriales.</p>
-                <div class="trainer">
-                  <div class="categories mb-3">
-                    <p class="category-estado">Cartelera</p>
-                    <p class="category-date">Inicio: 15/06/2024</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch justify-content-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="course-item">
-              <img src="assets/img/cursos/curso-6.jpeg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <p class="category">Control Automático e Instrumentación</p>
-                  <p class="category-modalidad">Presencial</p>
-                </div>
-
-                <h3><a href="course-details.html">Programación de PLC Aplicada al Control de Procesos</a></h3>
-                <p class="description">Nuestro curso te ofrece un enfoque integral, desde los
-                  fundamentos hasta aplicaciones avanzadas como la simulación
-                  y el control de procesos con regulación PID.</p>
-                  <div class="trainer">
-                    <div class="categories mb-3">
-                      <p class="category-estado">Cartelera</p>
-                      <p class="category-date">Inicio: 17/06/2024</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-          <div class="button-courses d-flex justify-content-center">
-            <a href="/cursos.html" class="btn-get-started scrollto">Ver Todos los Cursos</a>
+              </div> <!-- End Course Item-->
           </div>
         </div>
       </div>
-    </section><!-- /Courses Section -->
-
+    </section>
   </main>
 
   <!-- ======= Footer ======= -->
@@ -276,12 +295,9 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="/assets/js/jquery.min.js"></script>
