@@ -1190,7 +1190,7 @@ section,
 --------------------------------------------------------------*/
 
 .row{
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .courses{
   background-color: transparent;
@@ -1211,7 +1211,7 @@ section,
 
 .courses .course-content h3 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .courses .course-content h3 a {
@@ -1233,7 +1233,7 @@ section,
 .category-modalidad{
   background: var(--default-color-primary);
   color: var(--contrast-color);
-  font-size: 14px;
+  font-size: 12px;
   padding: 6px 14px;
   margin: 0;
   border-radius: 5px;
@@ -1241,7 +1241,7 @@ section,
 .category-estado{
   background: var(--default-color-primary);
   color: var(--contrast-color);
-  font-size: 14px;
+  font-size: 12px;
   padding: 6px 14px;
   margin: 0;
   border-radius: 5px;
@@ -1249,7 +1249,7 @@ section,
 .category-date{
   background: var(--default-color-secondary);
   color: var(--contrast-color);
-  font-size: 14px;
+  font-size: 12px;
   padding: 6px 14px;
   margin: 1px;
   border-radius: 5px;
@@ -1258,17 +1258,10 @@ section,
 .courses .course-content .category {
   background:#263046;
   color: var(--contrast-color);
-  font-size: 14px;
+  font-size: 12px;
   padding: 6px 14px;
   margin: 0;
   border-radius: 5px;
-}
-
-.courses .course-content .price {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
 .courses .course-content .description {
@@ -2083,3 +2076,48 @@ PILARES
 /*---------------------------------------
 FILTER
 -----------------------------------------*/
+/* Estilo general para el sidebar */
+.filter{
+  background-color: var(--default-color-tertiary); /* Color de fondo azul */
+  padding: 20px;
+  border-radius: 10px;
+  color: white; /* Color del texto blanco */
+  width: 300px;
+}
+
+/* Títulos de las secciones */
+.filter h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--default-color-primary);
+  padding-bottom: 5px;
+}
+
+/* Estilo de los checkboxes y labels */
+
+/* Estilo de los checkboxes */
+.filter input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Botón para vaciar los filtros */
+.filter button#clear-filters {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--default-color-primary);
+  border: none;
+  border-radius: 5px;
+  color: #fff; /* Color del texto azul */
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter button#clear-filters:hover {
+  background-color: color-mix(in srgb, color percentage, color percentage); /* Color dorado más oscuro al pasar el ratón */
+}
+

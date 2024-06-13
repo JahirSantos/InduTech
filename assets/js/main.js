@@ -33,7 +33,7 @@
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-
+  
   /**
    * Hide mobile nav on same-page/hash links
    */
@@ -167,7 +167,6 @@
       clickable: true,
     },
   });
-  
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */

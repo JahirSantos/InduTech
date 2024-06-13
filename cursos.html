@@ -88,16 +88,23 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 filter">
             <div id="products-filters">
               <div class="filter-group">
                 <h5>Áreas de Conocimientos</h5>
-                <label><input type="checkbox" data-filter="*" class="filter-active">Todos</label>
-                <label><input type="checkbox" data-filter="filter-category-"> Conocimientos Técnicos del Gas Natural</label><br>
-                <label><input type="checkbox" class="filter-category" value="Conocimientos Técnicos del Petróleo"> Conocimientos Técnicos del Petróleo</label><br>
-                <label><input type="checkbox" class="filter-category" value="Control Automático e Instrumentación"> Control Automático e Instrumentación</label><br>
-                <label><input type="checkbox" class="filter-category" value="Gestión de Operaciones"> Gestión de Operaciones</label><br>
-                <label><input type="checkbox" class="filter-category" value="Gestión Integral de Mantenimiento y Confiabilidad"> Gestión Integral de Mantenimiento y Confiabilidad</label>
+                <label><input type="checkbox" class="filter-category" value="Competencias Técnicas del Gas Natural"> Competencias Técnicas del Gas Natural</label><br>
+                <label><input type="checkbox" class="filter-category" value="Competencias Técnicas Del Petróleo"> Competencias Técnicas Del Petróleo</label><br>
+                <label><input type="checkbox" class="filter-category" value="Dirección de Proyectos">Dirección de Proyectos</label><br>
+                <label><input type="checkbox" class="filter-category" value="Gestión Integral de Mantenimiento y Confiabilidad">Gestión Integral de Mantenimiento y Confiabilidad</label><br>
+                <label><input type="checkbox" class="filter-category" value="Gestión de Operaciones">Gestión de Operaciones</label><br>
+                <label><input type="checkbox" class="filter-category" value="Recursos Hídricos, Fertirriego e Hidráulica">Recursos Hídricos, Fertirriego e Hidráulica</label><br>
+                <label><input type="checkbox" class="filter-category" value="Control Automático e Instrumentación">Control Automático e Instrumentación</label><br>
+                <label><input type="checkbox" class="filter-category" value="Gestión de la Calidad en la Agroindustria de Expórtación">Gestión de la Calidad en la Agroindustria de Expórtación</label><br>
+                <label><input type="checkbox" class="filter-category" value="Seguridad Industrial">Seguridad Industrial</label><br>
+                <label><input type="checkbox" class="filter-category" value="Eficiencia Energética y Sostenibilidad Industrial">Eficiencia Energética y Sostenibilidad Industrial</label><br>
+                <label><input type="checkbox" class="filter-category" value="Administración de Recursos Humanos">Administración de Recursos Humanos</label><br>
+                <label><input type="checkbox" class="filter-category" value="Administración de Negocios – Escuela de Emprendedores">Administración de Negocios – Escuela de Emprendedores</label><br>
+                <label><input type="checkbox" class="filter-category" value="Habilidades Blandas y Competencias para el Éxito">Habilidades Blandas y Competencias para el Éxito</label>
               </div>
               <div class="filter-group">
                 <h5>Estado</h5>
@@ -297,8 +304,65 @@
   </footer><!-- End Footer -->
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- JavaScript de Filtrado -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const filterCategory = document.querySelectorAll(".filter-category");
+      const filterStatus = document.querySelectorAll(".filter-status");
+      const filterMode = document.querySelectorAll(".filter-mode");
+      const clearFilters = document.getElementById("clear-filters");
+      const courses = document.querySelectorAll(".course-item");
 
+      function filterCourses() {
+        courses.forEach(course => {
+          course.style.display = "block";
 
+          let categoryElement = course.querySelector(".category");
+          let statusElement = course.querySelector(".category-estado");
+          let modeElement = course.querySelector(".category-modalidad");
+
+          let category = categoryElement ? categoryElement.textContent.trim() : "";
+          let status = statusElement ? statusElement.textContent.trim() : "";
+          let mode = modeElement ? modeElement.textContent.trim() : "";
+
+          let categoryChecked = Array.from(filterCategory).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+          let statusChecked = Array.from(filterStatus).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+          let modeChecked = Array.from(filterMode).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+
+          let showCourse = true;
+
+          if (categoryChecked.length && !categoryChecked.some(cat => category.includes(cat.replace('.', '')))) {
+            showCourse = false;
+          }
+          if (statusChecked.length && !statusChecked.some(stat => status.includes(stat.replace('.', '')))) {
+            showCourse = false;
+          }
+          if (modeChecked.length && !modeChecked.some(mod => mode.includes(mod.replace('.', '')))) {
+            showCourse = false;
+          }
+
+          course.style.display = showCourse ? "block" : "none";
+        });
+      }
+
+      filterCategory.forEach(checkbox => {
+        checkbox.addEventListener("change", filterCourses);
+      });
+      filterStatus.forEach(checkbox => {
+        checkbox.addEventListener("change", filterCourses);
+      });
+      filterMode.forEach(checkbox => {
+        checkbox.addEventListener("change", filterCourses);
+      });
+
+      clearFilters.addEventListener("click", () => {
+        filterCategory.forEach(checkbox => checkbox.checked = false);
+        filterStatus.forEach(checkbox => checkbox.checked = false);
+        filterMode.forEach(checkbox => checkbox.checked = false);
+        filterCourses();
+      });
+    });
+  </script>
   <!-- Vendor JS Files -->
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/popper.js"></script>
