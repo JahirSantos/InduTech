@@ -49,17 +49,29 @@
   /**
    * Toggle mobile nav dropdowns
    */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      if (document.querySelector('.mobile-nav-active')) {
-        e.preventDefault();
-        this.parentNode.classList.toggle('active');
-        this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-        e.stopImmediatePropagation();
-      }
-    });
-  });
+    // Manejo de enlaces en el menú
+    var navLinks = document.querySelectorAll('.navmenu a');
 
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            var href = link.getAttribute('href');
+            if (href && href !== '#') {
+                window.location.href = href;
+            }
+        });
+    });
+
+    // Manejo de dropdowns en el menú móvil
+    document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
+        navmenu.addEventListener('click', function(e) {
+            if (document.body.classList.contains('mobile-nav-active')) {
+                e.preventDefault();
+                this.parentNode.classList.toggle('active');
+                this.nextElementSibling.classList.toggle('dropdown-active');
+                e.stopImmediatePropagation();
+            }
+        });
+    });
   /**
    * Preloader
    */

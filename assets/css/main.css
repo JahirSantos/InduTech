@@ -393,6 +393,7 @@ h6 {
   }
 
   .mobile-nav-active .navmenu {
+    height: 45vh;
     position: fixed;
     overflow: hidden;
     inset: 0;
@@ -1241,7 +1242,6 @@ section,
   color: var(--contrast-color);
   font-size: 12px;
   padding: 6px 14px;
-  margin: 1px;
   border-radius: 5px;
 
 }
@@ -1257,36 +1257,6 @@ section,
 .courses .course-content .description {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-.courses .trainer {
-  padding-top: 15px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.courses .trainer .trainer-profile img {
-  max-width: 50px;
-  border-radius: 50px;
-}
-
-.courses .trainer .trainer-profile .trainer-link {
-  padding-left: 10px;
-  font-weight: 600;
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.courses .trainer .trainer-profile .trainer-link:hover {
-  color: var(--accent-color);
-}
-
-.courses .trainer .trainer-rank {
-  font-size: 18px;
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.courses .trainer .trainer-rank .user-icon {
-  font-size: 22px;
 }
 #courses .btn-get-started {
   font-family: "Poppins", sans-serif !important; 
@@ -1310,6 +1280,36 @@ section,
   padding-top: 30px;
 }
 
+@media (min-width: 1200px){
+  .courses .filter{
+    width: 280px;
+  }
+  .courses .course-item {
+    width: 400px;
+  }
+  .courses .course-content .category {
+    font-size: 14px;
+  }
+  .category-modalidad{
+    font-size: 14px;
+  }
+  .category-estado{
+    margin: 0 0 16px;
+    font-size: 14px;
+  }
+  .category-date{
+    font-size: 14px;
+  }
+  .courses .course-content h3 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .courses .course-content .description {
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+  }
+
+}
 @media (max-width: 768px) {
   .courses .course-item{
     width: 350px;
@@ -1413,6 +1413,10 @@ section,
 .image-content{
   display: flex;
   justify-content: center;
+}
+
+.events .category-date{
+  margin: 10px;
 }
 
 @media (min-width: 1024px) {
