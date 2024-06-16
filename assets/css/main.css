@@ -1181,15 +1181,22 @@ section,
 --------------------------------------------------------------*/
 
 .row{
+  display: flex;
+  flex-wrap: wrap;
   padding-bottom: 20px;
 }
 .courses{
   background-color: transparent;
 }
+.courses .filter{
+  width: 280px;
+
+}
 .courses .course-item {
   background-color: #fff;
   border-radius: 10px;
   margin-bottom: 20px; /* Ajusta esto según sea necesario */
+  width: 100%; /* Asegura que tome el ancho del contenedor */
 }
 
 .courses .course-item img{
@@ -1280,10 +1287,8 @@ section,
   padding-top: 30px;
 }
 
+
 @media (min-width: 1200px){
-  .courses .filter{
-    width: 280px;
-  }
   .courses .course-item {
     width: 400px;
   }
