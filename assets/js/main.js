@@ -22,56 +22,34 @@
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
-  /**
-   * Mobile nav toggle
-   */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+  const body = document.querySelector('body');
 
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+  function mobileNavToggle() {
+      body.classList.toggle('mobile-nav-active');
+      mobileNavToggleBtn.classList.toggle('bi-list');
+      mobileNavToggleBtn.classList.toggle('bi-x');
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-  
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
 
+  mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
+
+  document.querySelectorAll('#navmenu a').forEach(navLink => {
+      navLink.addEventListener('click', () => {
+          if (body.classList.contains('mobile-nav-active')) {
+              mobileNavToggle();
+          }
+      });
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-    // Manejo de enlaces en el menú
-    var navLinks = document.querySelectorAll('.navmenu a');
-
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            var href = link.getAttribute('href');
-            if (href && href !== '#') {
-                window.location.href = href;
-            }
-        });
-    });
-
-    // Manejo de dropdowns en el menú móvil
-    document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-        navmenu.addEventListener('click', function(e) {
-            if (document.body.classList.contains('mobile-nav-active')) {
-                e.preventDefault();
-                this.parentNode.classList.toggle('active');
-                this.nextElementSibling.classList.toggle('dropdown-active');
-                e.stopImmediatePropagation();
-            }
-        });
-    });
+  document.querySelectorAll('.navmenu .dropdown > a').forEach(navLink => {
+      navLink.addEventListener('click', function (e) {
+          if (body.classList.contains('mobile-nav-active')) {
+              e.preventDefault();
+              this.parentNode.classList.toggle('active');
+              this.nextElementSibling.classList.toggle('dropdown-active');
+          }
+      });
+  });
   /**
    * Preloader
    */
