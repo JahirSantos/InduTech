@@ -214,8 +214,8 @@
 	fullHeight();
     var header = document.getElementById('header');
     var logo = document.getElementById('logo-img');
-    var originalLogo = 'assets/img/logos/logo-2.png';
-    var scrolledLogo = 'assets/img/logos/logo-3.png';
+    var originalLogo = '/assets/img/logos/logo-2.png';
+    var scrolledLogo = '/assets/img/logos/logo-3.png';
     
     window.addEventListener('scroll', function() {
       if (window.scrollY > 40) {
