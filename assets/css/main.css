@@ -502,20 +502,26 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
-  color: var(--default-color);
-  background-color: var(--background-color);
+  height: 200px;
+  background-color: var(--default-color-tertiary);
   padding: 20px 0;
   position: relative;
 }
-
-.page-title h1 {
+.page-title .section-title {
+  text-align: center;
+  padding-top: 30px;
+  position: relative;
+}
+.page-title h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--background-color);
   font-size: 28px;
   font-weight: 700;
   margin: 0;
 }
 
 .page-title .breadcrumbs ol {
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -526,6 +532,7 @@ h6 {
 }
 
 .page-title .breadcrumbs ol li+li {
+  color: var(--nav-color);
   padding-left: 10px;
 }
 
@@ -533,7 +540,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb,#fff, transparent 70%);
 }
 
 /*--------------------------------------------------------------
@@ -2012,8 +2019,128 @@ FILTER
   background-color: color-mix(in srgb, color percentage, color percentage); /* Color dorado más oscuro al pasar el ratón */
 }
 
+/* COURSES DETAILS */
+.courses-course-details {
+  background-color: transparent;
+}
 
-/*---------------------------------------
-COURSES DETAILS
------------------------------------------*/
+.courses-course-details .card-course {
+  height: 650px;
+  background-color: var(--default-color-tertiary);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
+.courses-course-details .img-curso {
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.courses-course-details .course-info {
+  padding: 5px;
+}
+
+.courses-course-details .course-info .category,
+.courses-course-details .course-info .category-docente,
+.courses-course-details .course-info .category-modalidad,
+.courses-course-details .course-info .category-date {
+  width: 185px;
+  text-align: center;
+  font-size: 12px;
+  padding: 6px 14px;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.courses-course-details .course-info .category {
+  background: var(--default-color-primary);
+  color: var(--contrast-color);
+}
+
+.courses-course-details .course-info .category-docente {
+  background: var(--default-color-secondary);
+  color: var(--contrast-color);
+}
+
+.courses-course-details .course-info .category-modalidad {
+  background: var(--default-color-primary);
+  color: var(--contrast-color);
+}
+
+.courses-course-details .course-info .category-date {
+  background: var(--default-color-secondary);
+  color: var(--contrast-color);
+}
+
+.section-title .title-course {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.courses-course-details .text {
+  color: #fff;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.text span {
+  color: var(--default-color-secondary);
+  font-weight: 700;
+}
+
+/* Objectives List Styling */
+.objectives-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.objectives-list li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.objective-title {
+  min-width: 250px; /* Ensure title section has a fixed minimum width */
+  font-weight: bold;
+  color: var(--default-color-secondary);
+  margin-right: 10px; /* Add spacing between title and text */
+}
+
+.objective-text {
+  flex: 1; /* Allow text section to take up the remaining space */
+}
+
+.objectives-list li::before {
+  content: '\2713'; /* Check mark character */
+  color: var(--default-color-secondary);
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px; /* Space between check mark and title */
+  align-self: flex-start; /* Align the check mark at the start of the item */
+}
+
+/* Tabs */
+.tabs {
+  background-color: transparent;
+}
+
+.tabs .nav-tabs{
+  background-color: var(--default-color-tertiary);
+  border-radius: 10px;
+}
+.tabs .nav-tabs a {
+  color: var(--default-color-secondary);
+  font-weight: 600;
+  font-size: 16px;
+}
+.tabs .nav-tabs .active{
+  color: var(--default-color-tertiary);
+  font-weight: 600;
+}
