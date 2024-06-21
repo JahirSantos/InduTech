@@ -2144,3 +2144,26 @@ FILTER
   color: var(--default-color-tertiary);
   font-weight: 600;
 }
+.tab-content h3{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.tab-content p{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.tab-pane img{
+  width: 100%;
+  border-radius: 20px;
+
+}
+.temario-item:before{
+  content: '\2713'; /* Check mark character */
+  color: var(--default-color-secondary);
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px; /* Space between check mark and title */
+  align-self: flex-start; /* Align the check mark at the start of the item */
+}
