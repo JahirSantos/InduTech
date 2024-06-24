@@ -2167,3 +2167,26 @@ FILTER
   margin-right: 10px; /* Space between check mark and title */
   align-self: flex-start; /* Align the check mark at the start of the item */
 }
+
+/*---------------------------------------
+          EVENTOS VERIFICACION
+-----------------------------------------*/
+.eventos-validacion{
+  background-color: transparent;
+  padding: 20px;
+}
+.eventos-validacion .section-title p{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.eventos-validacion .container h3{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.eventos-validacion img{
+  width: 100%;
+  background-color: #fff;
+}
